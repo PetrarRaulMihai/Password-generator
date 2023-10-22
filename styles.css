@@ -1,0 +1,211 @@
+body{
+    display:flex;
+    justify-content: center;
+    padding-top:7%;
+    background-image: url('background.png');
+}
+
+.under-main-container-box{
+    position:relative;
+    width: 555px;
+    height:555px;  
+    overflow: hidden;
+    border-radius: 20px;
+    backdrop-filter: blur(0px);
+}
+
+.under-main-container-box::before{
+    content: "";
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width:555px;
+    height:555px;
+    background:linear-gradient(0deg, transparent, 
+    transparent,#95f6e2, #95f6e2, #95f6e2);
+    z-index:1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    
+}
+
+.under-main-container-box::after{
+    content: "";
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width:555px;
+    height:555px;
+    background:linear-gradient(0deg, transparent, 
+    transparent, #95f6e2, #95f6e2, #95f6e2);
+    z-index:1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.main-container{
+    position:absolute;    
+    right:10px;
+    left:10px;
+    top:10px;
+    bottom:10px;
+    padding:0 20px 0 20px;    
+    /* background:linear-gradient(60deg, #053744, #053744);    */
+    /* background: rgb(45, 45, 45);    */
+    background: 
+    linear-gradient(217deg, #053744,#053744,rgba(255,0,0,0)),            
+    linear-gradient(127deg, #042c34,#092a38,rgba(255,0,0,0)),            
+    linear-gradient(336deg, #053744,#1f3541,rgba(255,0,0,0));
+    z-index: 2;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    color: lightgray;
+    text-align: center;
+}
+
+.display-password-container{   
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;    
+    font-size:25px;
+    color:white;
+    margin-bottom:15px;        
+}
+
+.password-output{    
+    border: none;
+    width: 85%; 
+    outline:none;
+    padding-left:15px;
+    height:40px;
+    font-size: 25px;
+    border-radius: 20px;   
+    background-color: #167087;   
+    color: #0ef5d8;    
+}
+
+.password-output::placeholder{     
+    color: #0ef5d8;    
+}
+
+.copy-password{
+    width:40px; 
+    border-radius: 20px;
+    border: none;   
+    background-color: #167087;   
+    color: #0ef5d8;
+    font-size:25px;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+.copy-password:hover{
+   opacity: 0.7;
+}
+
+.copy-password:active{
+   transform: scale(0.9);
+}
+
+.password-development-container{    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+    color:#95f6e2;
+    gap:15px
+
+}
+
+.length-indicator-container{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+form{
+    /* background-color: rgb(154, 154, 154); */
+}
+
+.strength-indicator-container{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:25px;
+}
+
+.strength-indicator-container div{
+    /* background-color: rgb(154, 154, 154); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px    
+}
+.strength-indicator-container p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:28px;
+    font-weight:bold;
+    color:#95f6e2;    
+    margin:0;
+}
+
+
+.empty{
+    border:2px solid #95f6e2;
+    height:30px;    
+    width:15px; 
+    border-radius: 10px; 
+}
+
+
+.level-class{
+    border:2px solid  #0ef9db;
+    background-color: #0ef9db;                
+}
+
+.get-result-button{    
+    background-color: #054656;
+    height:60px;
+    border-radius:20px;
+    border-color:#0ef9db;
+    color:#0ef9db;
+    font-size:25px;
+    cursor:pointer;
+    transition: transform 0.15s;
+}
+
+.get-result-button:active{    
+    transform: scale(0.95);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #156064;
+    height: 6px;
+    border-radius: 3px;    
+  }  
+ 
+input[type="range"]::-webkit-slider-thumb { 
+    margin-top: -5px;    
+}
+
+.checkbox-box{
+    accent-color: #0ef9db;
+    transform: scale(1.5);
+}

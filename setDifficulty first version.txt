@@ -1,0 +1,55 @@
+let setDifficulty = () => {       
+    if(checkCount === 1){
+        if(range.value >20){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class'); 
+        }else{
+            blockSoft.classList.add('level-class'); 
+        }
+    }else if(checkCount === 2){
+        if(range.value > 20){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class');
+            blockMedium.classList.add('level-class');
+        }else if((range.value < 20) && (range.value >= 15)){
+            blockSoft.classList.add('level-class');
+            blockWeak.classList.add('level-class');
+        }else{
+            blockSoft.classList.add('level-class'); 
+        }        
+    }
+    else if(checkCount === 3){
+       if((range.value > 20)){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class'); 
+            blockMedium.classList.add('level-class'); 
+            blockStrong.classList.add('level-class');               
+        }else if((range.value <= 20) && (range.value > 15)){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class'); 
+            blockMedium.classList.add('level-class');
+        }else if((range.value <= 15) && (range.value > 5)){
+            blockSoft.classList.add('level-class');
+            blockWeak.classList.add('level-class');  
+        }else{
+            blockSoft.classList.add('level-class');
+        }        
+    }
+    else if(checkCount === 4 ){
+        if(range.value > 12){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class');
+            blockMedium.classList.add('level-class');
+            blockStrong.classList.add('level-class');
+        }else if((range.value <= 12) && (range.value > 6)){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class'); 
+            blockMedium.classList.add('level-class');                
+        }else if((range.value <= 6) && (range.value > 3)){
+            blockSoft.classList.add('level-class'); 
+            blockWeak.classList.add('level-class'); 
+        }else{
+            blockSoft.classList.add('level-class'); 
+        }
+    }
+}
